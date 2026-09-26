@@ -1,0 +1,18 @@
+node_modules/
+# Keep the prebuilt UI so a clone can launch without Node.js.
+.research-state/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+__pycache__/
+*.pyc
+config.local.json
+.env
+.env.*
+!.env.example
+*.db
+*.pdf
+*.zip
+*.log
+.DS_Store
+work/

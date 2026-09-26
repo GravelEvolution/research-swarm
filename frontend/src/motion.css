@@ -1,0 +1,6 @@
+.blur-text{perspective:600px;white-space:inherit}.blur-glyph{display:inline-block;transform-origin:50% 80%;white-space:pre-wrap}.blur-word{display:inline-block;white-space:nowrap}.blur-unit{display:inline}.motion-readable{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:pre!important;border:0!important;user-select:none!important}
+/* Additive to AntD's drawer positioning; blur never changes layout or pointer targets. */
+.graph-node-tooltip{animation:research-blur-enter .28s cubic-bezier(.23,1,.32,1) both}
+.blur-long{display:inline-block;max-width:100%;white-space:inherit;vertical-align:baseline}
+@keyframes research-blur-enter{from{opacity:0;filter:blur(14px);transform:translateY(4px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.graph-node-tooltip{animation:none}.blur-glyph{transform:none!important;filter:none!important}}

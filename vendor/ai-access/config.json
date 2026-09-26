@@ -1,0 +1,58 @@
+{
+  "project": {
+    "name": "独立科研检索模板",
+    "description": "",
+    "version": "research-swarm-source/1"
+  },
+  "tasks": {
+    "active_id": null,
+    "root": "tasks"
+  },
+  "storage": {
+    "db_path": "data/paper_research.sqlite",
+    "pdf_dir": "papers",
+    "report_path": "data/decision_report.md",
+    "structure_export": "exports/structure_export.json"
+  },
+  "sources": {
+    "openalex": {
+      "enabled": true,
+      "base_url": "https://api.openalex.org/works",
+      "mailto": "",
+      "ieee_only": false
+    },
+    "crossref": {
+      "enabled": true,
+      "base_url": "https://api.crossref.org/works",
+      "fallback_when_sparse": true
+    },
+    "arxiv": {
+      "enabled": true,
+      "base_url": "https://export.arxiv.org/api/query"
+    },
+    "unpaywall": {
+      "enabled": false,
+      "email": ""
+    }
+  },
+  "scoring": {
+    "weights": {
+      "novelty": 0.2,
+      "relevance": 0.35,
+      "impact": 0.25,
+      "repro": 0.15,
+      "urgency": 0.05
+    }
+  },
+  "llm": {
+    "active_provider": null,
+    "active_model": null,
+    "providers": {}
+  },
+  "retrieve": {
+    "default_top_k": 10,
+    "default_year_from": 2020,
+    "download_pdfs_on_ingest": false
+  },
+  "topics": []
+}
